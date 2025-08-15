@@ -1,46 +1,62 @@
-# 👻 PhasmoApp - Your Ultimate Phasmophobia Companion
+<h1 align="center">👻 PhasmoApp - Your Ultimate Phasmophobia Companion</h1>
+<p align="center">**Log evidence, track ghosts, and test your knowledge!** 💀</p>
+<p align="center">
+  <a href="https://github.com/ripVort3X/PhasmoApp/stargazers">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/ripVort3X/PhasmoApp?style=flat-square&cacheSeconds=2592000" />
+  </a>
+  <a href="https://github.com/ripVort3X/PhasmoApp/forks">
+    <img alt="GitHub Forks" src="https://img.shields.io/github/forks/ripVort3X/PhasmoApp?style=flat-square&cacheSeconds=2592000" />
+  </a>
+  <a href="https://github.com/ripVort3X/PhasmoApp/issues">
+    <img alt="GitHub Issues" src="https://img.shields.io/github/issues-raw/ripVort3X/PhasmoApp?style=flat-square&cacheSeconds=2592000" />
+  </a>
+  <a href="https://github.com/ripVort3X/PhasmoApp/blob/main/LICENSE">
+    <img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" />
+  </a>
+</p>
 
-> A feature-packed **Phasmophobia** web app for ghost hunters! Keep track of evidence, explore a detailed ghost guide, and test your knowledge with fun trivia.
-
-## 🌟 Features
+---
+## 🚀 Features
 
 ✅ **Evidence Tracker** – Log in-game evidence to identify ghosts faster.  
 ✅ **Ghost Guide** – Comprehensive details on every ghost type, their behaviors, and weaknesses.  
 ✅ **Trivia Section** – Challenge yourself with Phasmophobia-related quizzes and facts.  
-✅ **User-Friendly Interface** – Sleek and responsive design for easy access on any device. 
+✅ **User-Friendly Interface** – Sleek and responsive design for easy access on any device.
 
 ---
+## 📦 Installation
 
-## 🎮 How It Works
-
-1. **Select Your Evidence** – Choose the clues you've gathered in the game.
-2. **Identify the Ghost** – Get suggestions based on available evidence.
-3. **Read Ghost Details** – Learn about its traits, strengths, and weaknesses.
-4. **Test Your Knowledge** – Have fun with Phasmophobia trivia and see how much you know!
+### 1. Clone the repository: `git clone https://github.com/ripVort3X/PhasmoApp.git`
+### 2. Open the project folder and run `npm install` to install dependencies.
+### 3. Start the app: `npm start`
 
 ---
+## ⚙️ Usage
 
-## 💡 Future Plans
+### Tracking Evidence
+Use the Evidence Tracker page to log your in-game findings. Select the evidence you've gathered, and get suggestions on which ghosts it might be.
 
-🔹 More trivia questions & difficulty levels.  
-🔹 AI-powered ghost prediction.  
+### Exploring Ghost Guide
+Browse our comprehensive guide to learn about each ghost type, their strengths, weaknesses, and more.
+
+### Testing Knowledge
+Have fun with Phasmophobia-related trivia and see how much you know!
 
 ---
-
 ## 🤝 Contributing
+
 We welcome contributions! Feel free to fork the repo, create a new branch, and submit a pull request. Let's make **PhasmoApp** even better together!
 
 ---
-
 ## 📜 License
+
 This project is licensed under the **MIT License** – feel free to use and modify it.
 
 ---
-
 ## 🔗 Connect with Us
+
 💬 **Discord Server:** [Join Our Community](https://discord.gg/VnbnV3FMDh)  
 👤 **Discord User:** 7vaibhav
 
 ---
-
-Made with ❤️ for all ghost hunters! Happy hunting! 👻
+⭐ Star this repo if you like it! Made with ❤️ by ripVort3X. Happy hunting! 👻
