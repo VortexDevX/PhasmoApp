@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 👻 Phasmophobia App
 
 A companion web app for **Phasmophobia** players to track evidence, identify ghosts, learn about equipment, and test their knowledge with trivia.
