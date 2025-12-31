@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipment Guide - Phasmophobia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+        /* Equipment Page Styles */
+        .container {
+            padding: 1rem;
+        }
+
+        .spooky-header {
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+        }
+
+        .spooky-header h1 {
+            font-size: 2.2rem;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-section {
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid var(--primary-red);
+        }
+
+        .filter-section h3 {
+            font-size: 1rem;
+            margin: 0 0 0.8rem 0;
+            color: var(--primary-red);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .category-btn {
+            background: rgba(255, 68, 68, 0.15);
+            border: 2px solid rgba(255, 68, 68, 0.4);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .category-btn:hover {
+            border-color: var(--primary-red);
+            background: rgba(255, 68, 68, 0.25);
+        }
+
+        .category-btn.active {
+            background: var(--primary-red);
+            border-color: var(--primary-red);
+        }
+
+        .equipment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .equipment-header h2 {
+            font-size: 1.3rem;
+            margin: 0;
+            color: var(--ghost-green);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .item-count {
+            background: rgba(102, 255, 102, 0.15);
+            color: var(--ghost-green);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .equipment-card {
+            background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(15, 15, 15, 0.95));
+            border-radius: 10px;
+            padding: 1rem;
+            border-left: 4px solid var(--primary-red);
+            transition: all 0.2s ease;
+        }
+
+        .equipment-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 68, 68, 0.2);
+        }
+
+        .equipment-card h3 {
+            color: var(--primary-red);
+            font-size: 1.1rem;
+            margin: 0 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .equipment-card h3 i {
+            font-size: 1rem;
+        }
+
+        .equipment-card .description {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .equipment-card .usage {
+            background: rgba(102, 255, 102, 0.1);
+            border-left: 3px solid var(--ghost-green);
+            padding: 0.5rem 0.8rem;
+            font-size: 0.85rem;
+            color: var(--ghost-green);
+            border-radius: 0 5px 5px 0;
+            margin-bottom: 0.8rem;
+        }
+
+        .equipment-card .usage strong {
+            color: #fff;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tag {
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .tag.category {
+            background: rgba(255, 68, 68, 0.2);
+            color: var(--primary-red);
+        }
+
+        .tag.evidence {
+            background: rgba(102, 255, 102, 0.2);
+            color: var(--ghost-green);
+        }
+
+        .tag.new {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        .tag.tiers {
+            background: rgba(168, 85, 247, 0.2);
+            color: #a855f7;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .no-items {
+            text-align: center;
+            padding: 2rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <header class="spooky-header">
+            <h1>Equipment Guide</h1>
+            <p class="subtitle">Master your ghost hunting gear</p>
+        </header>
+
+        <div class="top-bar">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Home
+            </a>
+        </div>
+
+        <section class="filter-section">
+            <h3><i class="fas fa-filter"></i> Filter by Category</h3>
+            <div class="category-buttons" id="category-buttons">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-border-all"></i> All
+                </button>
+            </div>
+        </section>
+
+        <div class="equipment-header">
+            <h2><i class="fas fa-toolbox"></i> Equipment</h2>
+            <span id="item-count" class="item-count">0 items</span>
+        </div>
+
+        <div id="equipment-grid" class="equipment-grid"></div>
+    </div>
+
+    <script>
+        let equipment = [];
+        let activeCategory = 'all';
+
+        // Category config
+        const categories = {
+            'Starter Equipment': { icon: 'fa-box-open', color: '#f59e0b' },
+            'Detection': { icon: 'fa-satellite-dish', color: '#22c55e' },
+            'Protection': { icon: 'fa-shield-halved', color: '#ef4444' },
+            'Utility': { icon: 'fa-wrench', color: '#3b82f6' }
+        };
+
+        // Load equipment data
+        fetch('../equipment.json')
+            .then(res => res.json())
+            .then(data => {
+                equipment = data;
+                renderCategoryButtons();
+                renderEquipment(equipment);
+            })
+            .catch(err => console.error('Error loading equipment:', err));
+
+        function renderCategoryButtons() {
+            const container = document.getElementById('category-buttons');
+
+            Object.keys(categories).forEach(cat => {
+                const btn = document.createElement('button');
+                btn.className = 'category-btn';
+                btn.dataset.category = cat;
+                btn.innerHTML = `<i class="fas ${categories[cat].icon}"></i> ${cat}`;
+                container.appendChild(btn);
+            });
+
+            // Add click handlers
+            container.querySelectorAll('.category-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    container.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeCategory = btn.dataset.category;
+
+                    const filtered = activeCategory === 'all'
+                        ? equipment
+                        : equipment.filter(e => e.category === activeCategory);
+                    renderEquipment(filtered);
+                });
+            });
+        }
+
+        function renderEquipment(items) {
+            const grid = document.getElementById('equipment-grid');
+            const countEl = document.getElementById('item-count');
+
+            countEl.textContent = `${items.length} item${items.length !== 1 ? 's' : ''}`;
+
+            if (!items.length) {
+                grid.innerHTML = '<p class="no-items">No equipment found.</p>';
+                return;
+            }
+
+            grid.innerHTML = items.map(item => `
+        <div class="equipment-card">
+          <h3>
+            <i class="fas ${item.icon || 'fa-cube'}"></i>
+            ${item.name}
+          </h3>
+          <p class="description">${item.description}</p>
+          <div class="usage">
+            <strong>Usage:</strong> ${item.usage}
+          </div>
+          <div class="tags">
+            <span class="tag category">${item.category}</span>
+            ${item.evidence ? `<span class="tag evidence"><i class="fas fa-search"></i> ${item.evidence}</span>` : ''}
+            ${item.isNew ? '<span class="tag new">NEW</span>' : ''}
+            ${item.tiers ? '<span class="tag tiers"><i class="fas fa-layer-group"></i> Tiers</span>' : ''}
+          </div>
+        </div>
+      `).join('');
+        }
+    </script>
+</body>
+
+</html>

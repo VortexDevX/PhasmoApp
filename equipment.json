@@ -1,0 +1,194 @@
+[
+  {
+    "name": "EMF Reader",
+    "icon": "fa-wave-square",
+    "category": "Starter Equipment",
+    "description": "Detects electromagnetic field disturbances caused by ghost activity. Readings range from 1-5, with Level 5 being evidence.",
+    "usage": "Carry and watch for readings near ghost activity. Level 5 reading confirms EMF 5 evidence. Higher tier models have faster response times.",
+    "evidence": "EMF Level 5",
+    "tiers": true
+  },
+  {
+    "name": "Spirit Box",
+    "icon": "fa-radio",
+    "category": "Starter Equipment",
+    "description": "A modified radio that allows ghosts to communicate through white noise. Works in the ghost's room.",
+    "usage": "Ask questions in the ghost room (e.g., 'Where are you?', 'How old are you?'). Some ghosts only respond when the player is alone.",
+    "evidence": "Spirit Box",
+    "tiers": true
+  },
+  {
+    "name": "Ghost Writing Book",
+    "icon": "fa-book",
+    "category": "Starter Equipment",
+    "description": "A journal that ghosts can write cryptic messages in. Must be placed in the ghost's room.",
+    "usage": "Place in the ghost room on the floor or a surface. Check back periodically for writing. Higher tiers work faster.",
+    "evidence": "Ghost Writing",
+    "tiers": true
+  },
+  {
+    "name": "Thermometer",
+    "icon": "fa-temperature-low",
+    "category": "Starter Equipment",
+    "description": "Measures room temperature. Freezing temperatures (below 0°C/32°F) are evidence of certain ghost types.",
+    "usage": "Scan rooms to find cold spots. The ghost room is typically 5-10°C colder. Readings below 0°C confirm Freezing Temps evidence.",
+    "evidence": "Freezing Temps",
+    "tiers": true
+  },
+  {
+    "name": "UV Light",
+    "icon": "fa-lightbulb",
+    "category": "Starter Equipment",
+    "description": "Reveals ghost fingerprints left on doors, windows, and light switches under ultraviolet light.",
+    "usage": "Shine on doors, light switches, windows, and keyboards. Look for glowing handprints or fingerprints.",
+    "evidence": "Fingerprints",
+    "tiers": true
+  },
+  {
+    "name": "Video Camera",
+    "icon": "fa-video",
+    "category": "Starter Equipment",
+    "description": "Records footage and detects Ghost Orbs through night vision. Now also captures video evidence for the Journal.",
+    "usage": "Set up on a tripod in ghost room. Check the truck monitor for Ghost Orbs. Use night vision mode. Record unique video evidence.",
+    "evidence": "Ghost Orb",
+    "tiers": true
+  },
+  {
+    "name": "D.O.T.S Projector",
+    "icon": "fa-border-all",
+    "category": "Starter Equipment",
+    "description": "Projects a grid of green laser dots that reveals ghost silhouettes passing through them.",
+    "usage": "Place in ghost room on floor or wall. Watch for ghost silhouettes moving through the dots. Some ghosts only show on camera.",
+    "evidence": "D.O.T.S Projector",
+    "tiers": true
+  },
+  {
+    "name": "Flashlight",
+    "icon": "fa-flashlight",
+    "category": "Starter Equipment",
+    "description": "Basic handheld light source for navigating dark locations. Essential equipment for all investigations.",
+    "usage": "Always carry one. Ghosts may turn it off during ghost events. Click to toggle on/off.",
+    "evidence": null,
+    "tiers": true
+  },
+  {
+    "name": "Sound Recorder",
+    "icon": "fa-microphone-alt",
+    "category": "Detection",
+    "description": "New equipment from the Chronicle update. Records paranormal sounds that can be played back in the Journal.",
+    "usage": "Hold near ghost activity to record sounds like whispers, groans, and laughter. Captured sounds appear in your Journal.",
+    "evidence": null,
+    "tiers": false,
+    "isNew": true
+  },
+  {
+    "name": "Photo Camera",
+    "icon": "fa-camera",
+    "category": "Utility",
+    "description": "Takes photos of ghost activity for documentation and rewards. Capture unique photos for bonus money and XP.",
+    "usage": "Photograph ghosts, interactions, bones, cursed objects, fingerprints, and more. Up to 5 unique photos per investigation.",
+    "evidence": null,
+    "tiers": true
+  },
+  {
+    "name": "Crucifix",
+    "icon": "fa-cross",
+    "category": "Protection",
+    "description": "Prevents ghosts from initiating a hunt within a 3-meter radius (5m for Demons/Banshees). Has 2 uses.",
+    "usage": "Place in ghost room BEFORE a hunt starts. Each crucifix has 2 charges. Will burn when successfully preventing a hunt.",
+    "evidence": null,
+    "tiers": true
+  },
+  {
+    "name": "Incense",
+    "icon": "fa-spa",
+    "category": "Protection",
+    "description": "Formerly called Smudge Sticks. Burning incense repels the ghost and can stop an active hunt temporarily.",
+    "usage": "Light with a firelight near the ghost. During hunt: blinds ghost for 6 seconds. Outside hunt: prevents hunting for 90 seconds (180 for Spirit).",
+    "evidence": null,
+    "tiers": true,
+    "isNew": true
+  },
+  {
+    "name": "Firelight",
+    "icon": "fa-fire-alt",
+    "category": "Protection",
+    "description": "Used to light Incense and Candles. Essential for protection strategies. Formerly known as Lighter.",
+    "usage": "Required to light Incense during hunts. Keep in inventory for emergency use.",
+    "evidence": null,
+    "tiers": true
+  },
+  {
+    "name": "Salt",
+    "icon": "fa-mortar-pestle",
+    "category": "Detection",
+    "description": "When ghosts walk through salt piles, they leave UV-visible footprints. Wraiths never leave salt footprints.",
+    "usage": "Place salt piles in doorways or hallways. Use UV light to reveal footprints. Great for tracking ghost movement.",
+    "evidence": null,
+    "tiers": true
+  },
+  {
+    "name": "Motion Sensor",
+    "icon": "fa-running",
+    "category": "Detection",
+    "description": "Detects movement in a small area and displays on the truck monitor. Also counts as video evidence when triggered.",
+    "usage": "Place in hallways or rooms to track ghost movement. Check truck monitor for activity alerts.",
+    "evidence": null,
+    "tiers": false
+  },
+  {
+    "name": "Sound Sensor",
+    "icon": "fa-volume-up",
+    "category": "Detection",
+    "description": "Monitors sound levels in a designated area. Higher readings indicate ghost activity nearby.",
+    "usage": "Place around the map covering different areas. Check truck monitor for sound level readings.",
+    "evidence": null,
+    "tiers": false
+  },
+  {
+    "name": "Parabolic Microphone",
+    "icon": "fa-satellite-dish",
+    "category": "Detection",
+    "description": "Long-range directional microphone that detects sounds through walls. Useful for locating the ghost room.",
+    "usage": "Point in different directions and listen for high readings. Banshees produce a unique shriek (scream icon appears).",
+    "evidence": null,
+    "tiers": true
+  },
+  {
+    "name": "Sanity Medication",
+    "icon": "fa-pills",
+    "category": "Utility",
+    "description": "Pills that restore 40% of your sanity when consumed. Essential for extended investigations.",
+    "usage": "Use when sanity is low to prevent early hunts. Also removes the Moroi's sanity drain curse.",
+    "evidence": null,
+    "tiers": false,
+    "isNew": true
+  },
+  {
+    "name": "Head Gear",
+    "icon": "fa-hard-hat",
+    "category": "Utility",
+    "description": "Wearable head equipment with multiple tiers: Head Camera (Tier 1), LED Headlamp (Tier 2), Night Vision Goggles (Tier 3).",
+    "usage": "Tier 1: Streams view to truck. Tier 2: Hands-free lighting. Tier 3: See in complete darkness.",
+    "evidence": null,
+    "tiers": true
+  },
+  {
+    "name": "Candle",
+    "icon": "fa-fire",
+    "category": "Utility",
+    "description": "Provides ambient light and slowly restores sanity while lit. Can be blown out by ghost activity.",
+    "usage": "Light with firelight and place or carry. Helps restore sanity. Onryos won't hunt near lit candles.",
+    "evidence": null,
+    "tiers": false
+  },
+  {
+    "name": "Tripod",
+    "icon": "fa-broadcast-tower",
+    "category": "Utility",
+    "description": "Mounting equipment for video cameras. Provides stable positioning for hands-free monitoring.",
+    "usage": "Place in ghost room. Mount video camera on top for stable recording. Great for Ghost Orb hunting.",
+    "evidence": null,
+    "tiers": false
+  }
+]

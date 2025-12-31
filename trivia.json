@@ -15,9 +15,13 @@
     "answer": "Poltergeist"
   },
   {
-    "question": "What evidence does a Wraith leave behind?",
-    "options": ["Fingerprints", "Ghost Orb", "No footprints"],
-    "answer": "No footprints"
+    "question": "What is unique about the Wraith and salt?",
+    "options": [
+      "It leaves more footprints",
+      "It never leaves footprints in salt",
+      "It destroys salt instantly"
+    ],
+    "answer": "It never leaves footprints in salt"
   },
   {
     "question": "Which ghost becomes faster near active electronics?",
@@ -25,82 +29,144 @@
     "answer": "Raiju"
   },
   {
-    "question": "What's the primary strength of a Demon?",
-    "options": ["Frequent hunts", "Early hunts", "Fast movement"],
-    "answer": "Early hunts"
+    "question": "At what sanity level can a Demon start hunting?",
+    "options": ["50%", "70%", "100%"],
+    "answer": "70%"
   },
   {
-    "question": "Which evidence requires motion detection?",
-    "options": ["DOTS Projector", "Spirit Box", "EMF"],
-    "answer": "EMF 5"
+    "question": "Which evidence is detected using the D.O.T.S Projector?",
+    "options": ["D.O.T.S Projector", "Ghost Orb", "EMF Level 5"],
+    "answer": "D.O.T.S Projector"
   },
   {
-    "question": "What helps protect against ghost attacks?",
+    "question": "What helps prevent ghost hunts?",
     "options": ["Crucifix", "Flashlight", "Thermometer"],
     "answer": "Crucifix"
   },
   {
-    "question": "Which ghost affects sanity quickly when nearby?",
+    "question": "Which ghost drains sanity quickly when players are nearby?",
     "options": ["Phantom", "Yurei", "Oni"],
     "answer": "Yurei"
   },
   {
-    "question": "What's unique about Obake fingerprints?",
-    "options": ["Glow blue", "Six fingers", "Disappear quickly"],
-    "answer": "Six fingers"
+    "question": "What is unique about Obake fingerprints?",
+    "options": [
+      "They glow blue",
+      "They can have 6 fingers",
+      "They last forever"
+    ],
+    "answer": "They can have 6 fingers"
   },
   {
-    "question": "Which ghost can change its evidence when interacting with doors or objects?",
-    "options": ["Obake", "Phantom", "Wraith"],
-    "answer": "Obake"
+    "question": "Which ghost always shows Ghost Orbs as false evidence?",
+    "options": ["The Mimic", "Phantom", "Wraith"],
+    "answer": "The Mimic"
   },
   {
-    "question": "Which ghost is known for mimicking the abilities of other ghosts?",
-    "options": ["Mimic", "Shade", "Onryo"],
-    "answer": "Mimic"
+    "question": "Which ghost can hunt at 80% sanity when players are talking nearby?",
+    "options": ["Yokai", "Shade", "Oni"],
+    "answer": "Yokai"
   },
   {
-    "question": "Which ghost has an increased chance to attack when players have high sanity?",
-    "options": ["Demon", "Oni", "Shade"],
-    "answer": "Demon"
-  },
-  {
-    "question": "What tool is essential for detecting a Wraith’s presence?",
+    "question": "What is essential for detecting the Wraith's presence?",
     "options": ["Salt", "Thermometer", "Motion Sensor"],
     "answer": "Salt"
   },
   {
-    "question": "Which ghost prefers attacking only in the dark?",
+    "question": "Which ghost becomes more aggressive in darkness?",
     "options": ["Mare", "Poltergeist", "Banshee"],
     "answer": "Mare"
   },
   {
-    "question": "Which ghost is known for not leaving footprints after stepping in salt?",
-    "options": ["Wraith", "Hantu", "Revenant"],
-    "answer": "Wraith"
+    "question": "Which ghost tends to roam very little from its favorite room?",
+    "options": ["Goryo", "Myling", "Wraith"],
+    "answer": "Goryo"
   },
   {
-    "question": "Which ghost tends to roam long distances within a location?",
-    "options": ["Yokai", "Myling", "Goryo"],
-    "answer": "Yokai"
+    "question": "Which ghost makes very quiet footsteps during hunts?",
+    "options": ["Myling", "Revenant", "Demon"],
+    "answer": "Myling"
   },
   {
-    "question": "Which ghost makes its presence known by throwing objects frequently?",
-    "options": ["Poltergeist", "Revenant", "Demon"],
-    "answer": "Poltergeist"
-  },
-  {
-    "question": "What unique trait does a Goryo exhibit with the DOTS projector?",
+    "question": "What unique trait does a Goryo exhibit with D.O.T.S?",
     "options": [
-      "Only visible through a camera",
+      "Only visible through camera when alone",
       "Appears brighter",
       "Moves faster"
     ],
-    "answer": "Only visible through a camera"
+    "answer": "Only visible through camera when alone"
   },
   {
-    "question": "Which ghost’s hunt speed increases significantly when chasing a player?",
+    "question": "Which ghost's hunt speed increases when chasing a visible player?",
     "options": ["Revenant", "Hantu", "Banshee"],
     "answer": "Revenant"
+  },
+  {
+    "question": "What new equipment was added in the Chronicle update?",
+    "options": ["Sound Recorder", "Spirit Box", "EMF Reader"],
+    "answer": "Sound Recorder"
+  },
+  {
+    "question": "What were Smudge Sticks renamed to?",
+    "options": ["Incense", "Sage Burner", "Smoke Sticks"],
+    "answer": "Incense"
+  },
+  {
+    "question": "Which ghost moves faster in colder temperatures?",
+    "options": ["Hantu", "Jinn", "Raiju"],
+    "answer": "Hantu"
+  },
+  {
+    "question": "The Deogen always knows where players are. What is its weakness?",
+    "options": [
+      "Moves very slowly when close to players",
+      "Cannot hunt in light",
+      "Weak to crucifix"
+    ],
+    "answer": "Moves very slowly when close to players"
+  },
+  {
+    "question": "Which ghost ages and becomes weaker over time?",
+    "options": ["Thaye", "Spirit", "Shade"],
+    "answer": "Thaye"
+  },
+  {
+    "question": "What does Sanity Medication restore?",
+    "options": ["40% sanity", "100% sanity", "25% sanity"],
+    "answer": "40% sanity"
+  },
+  {
+    "question": "Which ghost curses players who get Spirit Box responses?",
+    "options": ["Moroi", "Deogen", "Spirit"],
+    "answer": "Moroi"
+  },
+  {
+    "question": "What happens to the Onryo when a flame is extinguished nearby?",
+    "options": [
+      "Increased hunt chance",
+      "It becomes invisible",
+      "It teleports"
+    ],
+    "answer": "Increased hunt chance"
+  },
+  {
+    "question": "Which ghost can interact in two places at once?",
+    "options": ["The Twins", "The Mimic", "Poltergeist"],
+    "answer": "The Twins"
+  },
+  {
+    "question": "What sound does the Banshee make on the Parabolic Microphone?",
+    "options": ["A unique shriek", "Laughing", "Footsteps"],
+    "answer": "A unique shriek"
+  },
+  {
+    "question": "How long does Incense stop a Spirit from hunting?",
+    "options": ["180 seconds", "90 seconds", "60 seconds"],
+    "answer": "180 seconds"
+  },
+  {
+    "question": "Which ghost cannot use its ability when the fuse box is off?",
+    "options": ["Jinn", "Mare", "Shade"],
+    "answer": "Jinn"
   }
 ]

@@ -2,169 +2,194 @@
   {
     "name": "Spirit",
     "evidences": ["EMF 5", "Spirit Box", "Ghost Writing"],
-    "description": "A standard ghost with no unique strengths but remains a persistent threat.",
+    "description": "A common ghost that is generally less aggressive than most, but can become more active over time.",
     "ability": "No unique ability but hunts regularly.",
-    "weakness": "Smudge Sticks extend its inactivity."
+    "weakness": "Incense stops it from hunting for longer than other ghosts (180 seconds vs 90).",
+    "huntThreshold": 50
   },
   {
     "name": "Wraith",
     "evidences": ["EMF 5", "Spirit Box", "D.O.T.S Projector"],
-    "description": "A supernatural entity that can teleport to players and avoids leaving traces.",
-    "ability": "Never leaves footprints in salt; teleports to targets.",
-    "weakness": "Can’t step in salt."
+    "description": "A supernatural entity that can teleport to players and phase through walls. Very dangerous.",
+    "ability": "Can teleport to a random player, causing an EMF reading at that location.",
+    "weakness": "Cannot step in salt and will never leave UV footprints in it.",
+    "huntThreshold": 50
   },
   {
     "name": "Phantom",
     "evidences": ["Spirit Box", "Fingerprints", "D.O.T.S Projector"],
-    "description": "A ghost that distorts vision and rapidly drains sanity when observed.",
-    "ability": "Drains sanity when looked at; disappears during hunts when taken a photo.",
-    "weakness": "Taking a photo makes it vanish."
+    "description": "A ghost that drains sanity quickly when looked at and can possess the living.",
+    "ability": "Looking at a Phantom drains sanity faster. Disappears when photographed during a ghost event.",
+    "weakness": "Taking a photo of it during a ghost event will cause it to disappear temporarily.",
+    "huntThreshold": 50
   },
   {
     "name": "Poltergeist",
-    "evidences": ["Spirit Box", "Ghost Orb", "Fingerprints"],
-    "description": "A mischievous ghost that thrives on chaos by throwing objects violently.",
-    "ability": "Throws multiple objects at once.",
-    "weakness": "Useless in an empty room."
+    "evidences": ["Spirit Box", "Fingerprints", "Ghost Writing"],
+    "description": "A mischievous ghost known for throwing and manipulating multiple objects at once.",
+    "ability": "Can throw multiple objects simultaneously. Throwing objects decreases nearby players' sanity.",
+    "weakness": "Is almost ineffective in an empty room with no objects to throw.",
+    "huntThreshold": 50
   },
   {
     "name": "Banshee",
-    "evidences": ["D.O.T.S Projector", "Fingerprints", "Freezing Temperatures"],
-    "description": "A ghostly hunter that fixates on one target at a time, often singing before it strikes.",
-    "ability": "Targets one player at a time; sings often.",
-    "weakness": "Crucifix has extended range."
+    "evidences": ["D.O.T.S Projector", "Fingerprints", "Ghost Orb"],
+    "description": "A singing ghost that stalks and targets one player at a time relentlessly.",
+    "ability": "Targets and hunts only one player at a time. Emits a unique shriek on the Parabolic Microphone.",
+    "weakness": "The Crucifix has an increased effective range (5m vs 3m).",
+    "huntThreshold": 50
   },
   {
     "name": "Jinn",
     "evidences": ["EMF 5", "Fingerprints", "Freezing Temperatures"],
-    "description": "A territorial entity that becomes significantly faster when chasing its prey.",
-    "ability": "Moves faster when a player is far away.",
-    "weakness": "Power breaker disables its speed."
+    "description": "A territorial ghost that travels faster when its target is far away. Feeds on electricity.",
+    "ability": "Moves significantly faster when chasing a player who is far away. Can instantly drop sanity.",
+    "weakness": "Cannot use its ability if the location's fuse box is off.",
+    "huntThreshold": 50
   },
   {
     "name": "Mare",
     "evidences": ["Spirit Box", "Ghost Orb", "Ghost Writing"],
-    "description": "A creature of darkness that thrives in unlit areas and is more aggressive at night.",
-    "ability": "Prefers darkness; more likely to turn off lights.",
-    "weakness": "Turning on lights reduces its aggression."
+    "description": "A ghost that thrives in darkness and becomes more aggressive when lights are off.",
+    "ability": "Has an increased chance to hunt in the dark. Will try to turn lights off more often.",
+    "weakness": "Turning on lights will reduce its chance to attack. Has a higher hunt threshold in light (40%).",
+    "huntThreshold": 60
   },
   {
     "name": "Revenant",
     "evidences": ["Ghost Orb", "Ghost Writing", "Freezing Temperatures"],
-    "description": "A slow-moving ghost that turns into a relentless predator when it spots its prey.",
-    "ability": "Moves extremely fast when chasing but slow otherwise.",
-    "weakness": "Hiding slows it down significantly."
+    "description": "A slow ghost that becomes extremely fast when it spots a player during a hunt.",
+    "ability": "Moves at double speed when it sees a player during a hunt (3m/s vs 1.5m/s).",
+    "weakness": "Moves very slowly when not chasing a player (1m/s). Hiding makes it slow down.",
+    "huntThreshold": 50
   },
   {
     "name": "Shade",
-    "evidences": ["EMF 5", "Ghost Orb", "Ghost Writing"],
-    "description": "A shy ghost that avoids revealing itself, making detection difficult.",
-    "ability": "Less active with multiple people nearby.",
-    "weakness": "Hard to find due to low activity."
+    "evidences": ["EMF 5", "Ghost Writing", "Freezing Temperatures"],
+    "description": "A shy ghost that is less active when players are nearby. Prefers to stay hidden.",
+    "ability": "Less likely to perform interactions when multiple players are in the room.",
+    "weakness": "Will not hunt if there are multiple players in the same room as it.",
+    "huntThreshold": 35
   },
   {
     "name": "Demon",
     "evidences": ["Fingerprints", "Ghost Writing", "Freezing Temperatures"],
-    "description": "A ruthless ghost that is unrelenting and can hunt at unusually high sanity levels.",
-    "ability": "Hunts more frequently than other ghosts.",
-    "weakness": "Crucifix is more effective."
+    "description": "The most aggressive ghost in the game. Attacks more often than any other ghost type.",
+    "ability": "Can hunt at 70% sanity. Has a rare chance to hunt at any sanity level.",
+    "weakness": "Crucifix range is increased to 5m. Smudging during a hunt only stops it for 60 seconds.",
+    "huntThreshold": 70
   },
   {
     "name": "Yurei",
     "evidences": ["D.O.T.S Projector", "Ghost Orb", "Freezing Temperatures"],
-    "description": "A vengeful spirit that exerts a strong mental influence, draining sanity faster than others.",
-    "ability": "Drains sanity faster than others.",
-    "weakness": "Smudging prevents it from roaming."
+    "description": "A vengeful spirit that drains sanity rapidly when near players.",
+    "ability": "Has a stronger effect on sanity. Can fully close doors (not just interact with them).",
+    "weakness": "Using incense in the ghost's room will trap it there temporarily, stopping it from roaming.",
+    "huntThreshold": 50
   },
   {
     "name": "Oni",
     "evidences": ["EMF 5", "D.O.T.S Projector", "Freezing Temperatures"],
-    "description": "A highly aggressive ghost that reveals itself more often and interacts frequently.",
-    "ability": "More visible and throws objects often.",
-    "weakness": "More active with multiple players nearby."
+    "description": "A very active ghost that becomes more visible when players are nearby.",
+    "ability": "More active when players are nearby. Can throw objects at great speed.",
+    "weakness": "Being more active makes it easier to find and identify.",
+    "huntThreshold": 50
   },
   {
     "name": "Yokai",
     "evidences": ["Spirit Box", "Ghost Orb", "D.O.T.S Projector"],
-    "description": "A ghost drawn to human voices, increasing its aggression when players speak nearby.",
-    "ability": "Can’t hear players from far but hunts more with talking.",
-    "weakness": "Talking nearby increases its aggression."
+    "description": "A ghost that is attracted to human voices and becomes agitated when players talk nearby.",
+    "ability": "Can hunt at 80% sanity when players are talking near it. Talking increases activity.",
+    "weakness": "Can only hear players within 2m during a hunt, making it easier to hide.",
+    "huntThreshold": 80
   },
   {
     "name": "Hantu",
     "evidences": ["Fingerprints", "Ghost Orb", "Freezing Temperatures"],
-    "description": "A ghost that thrives in the cold, becoming faster in low temperatures.",
-    "ability": "Moves faster in colder environments.",
-    "weakness": "Power breaker makes it slower."
+    "description": "A ghost that moves faster in cold areas and produces visible freezing breath during hunts.",
+    "ability": "Moves faster in colder rooms (up to 2.7m/s in freezing temps).",
+    "weakness": "Moves slower in warmer rooms. Will never turn the breaker on.",
+    "huntThreshold": 50
   },
   {
     "name": "Goryo",
     "evidences": ["EMF 5", "Fingerprints", "D.O.T.S Projector"],
-    "description": "A ghost that only manifests in the D.O.T.S projector when viewed through a camera.",
-    "ability": "Only appears on DOTS through a camera.",
-    "weakness": "Does not roam far from its room."
+    "description": "A ghost that shows itself only through D.O.T.S when no players are in the room.",
+    "ability": "D.O.T.S evidence can only be seen through a video camera when no players are in the room.",
+    "weakness": "Rarely roams far from its favorite room. Cannot change favorite rooms.",
+    "huntThreshold": 50
   },
   {
     "name": "Myling",
     "evidences": ["EMF 5", "Fingerprints", "Ghost Writing"],
-    "description": "A stealthy ghost that is nearly silent during hunts but makes loud noises otherwise.",
-    "ability": "Quieter when hunting.",
-    "weakness": "Loud when not hunting."
+    "description": "A very quiet ghost during hunts but produces more paranormal sounds through equipment.",
+    "ability": "Produces louder paranormal sounds on the Parabolic Microphone.",
+    "weakness": "Footsteps can only be heard within 12m during a hunt (vs normal 20m), making it stealthier.",
+    "huntThreshold": 50
   },
   {
     "name": "Onryo",
     "evidences": ["Spirit Box", "Ghost Orb", "Freezing Temperatures"],
-    "description": "A spirit of vengeance that grows aggressive when fire is extinguished nearby.",
-    "ability": "Extinguishing flames increases hunt chances.",
-    "weakness": "Fire deters hunts."
+    "description": "A spirit of vengeance that fears fire but becomes more dangerous when flames are extinguished.",
+    "ability": "Has an increased chance to hunt when a flame is extinguished nearby.",
+    "weakness": "Flames prevent hunts. Having a lit candle nearby will stop hunts.",
+    "huntThreshold": 60
   },
   {
     "name": "The Twins",
     "evidences": ["EMF 5", "Spirit Box", "Freezing Temperatures"],
-    "description": "A pair of ghosts that can interact with different locations at the same time.",
-    "ability": "Two entities with independent interactions.",
-    "weakness": "One moves slower when hunting."
+    "description": "Two ghosts that can interact with the environment simultaneously in different locations.",
+    "ability": "Either twin can initiate a hunt. Can interact in two places at once.",
+    "weakness": "One twin is faster (10% faster), one is slower (10% slower). They won't interact at the same time in the same room.",
+    "huntThreshold": 50
   },
   {
     "name": "Raiju",
     "evidences": ["EMF 5", "Ghost Orb", "D.O.T.S Projector"],
-    "description": "A ghost that feeds on electrical energy, increasing its speed around active devices.",
-    "ability": "Becomes faster near electronics.",
-    "weakness": "Turning off electronics weakens it."
+    "description": "A ghost that harnesses electrical energy and becomes faster near active equipment.",
+    "ability": "Moves faster near active electronic equipment during hunts. Can hunt at 65% sanity near electronics.",
+    "weakness": "Constantly disrupts electronic equipment when nearby, making it easy to track.",
+    "huntThreshold": 65
   },
   {
     "name": "Obake",
     "evidences": ["EMF 5", "Fingerprints", "Ghost Orb"],
-    "description": "A deceptive spirit that can alter its fingerprints and change evidence.",
-    "ability": "Occasionally changes its evidence (e.g., extra fingerprints).",
-    "weakness": "Fingerprints disappear faster."
+    "description": "A shapeshifting ghost that can change its appearance and alter its fingerprints.",
+    "ability": "Has a chance to not leave fingerprints (25%). Can leave 6-fingered handprints as a tell.",
+    "weakness": "Fingerprints disappear faster (60 seconds vs 120 seconds).",
+    "huntThreshold": 50
   },
   {
     "name": "The Mimic",
     "evidences": ["Spirit Box", "Fingerprints", "Freezing Temperatures"],
-    "description": "A mysterious ghost that imitates the abilities of other spirits and creates false Ghost Orbs.",
-    "ability": "Mimics other ghosts, including their evidence.",
-    "weakness": "Gives 4 evidence. Fake Evidence: Ghost Orb."
+    "description": "A deceptive ghost that can copy the traits and behaviors of other ghost types.",
+    "ability": "Mimics other ghosts' abilities and behaviors. Always shows Ghost Orbs as fake evidence.",
+    "weakness": "Always produces Ghost Orbs as a fourth piece of evidence, which can help identify it.",
+    "huntThreshold": 50,
+    "note": "Shows Ghost Orbs as additional false evidence"
   },
   {
     "name": "Moroi",
     "evidences": ["Spirit Box", "Ghost Writing", "Freezing Temperatures"],
-    "description": "A cursed spirit that weakens its victims by draining sanity at an alarming rate.",
-    "ability": "Sanity drain is extreme; speeds up based on sanity.",
-    "weakness": "Smudging temporarily blinds it."
+    "description": "A cursed ghost that drains sanity through Spirit Box responses and becomes faster at low sanity.",
+    "ability": "Curses players who get Spirit Box responses, causing double sanity drain. Moves faster at lower average sanity.",
+    "weakness": "Incense blinds it for longer (7.5 seconds vs 6 seconds). Sanity medication removes the curse.",
+    "huntThreshold": 50
   },
   {
     "name": "Deogen",
     "evidences": ["Spirit Box", "Ghost Writing", "D.O.T.S Projector"],
-    "description": "A ghost that relentlessly tracks its prey but moves slowly when close.",
-    "ability": "Always knows where you are but is extremely slow.",
-    "weakness": "Running away is easy."
+    "description": "An omniscient ghost that always knows where players are but moves very slowly when close.",
+    "ability": "Always knows exact player locations. Can be identified through unique Spirit Box response.",
+    "weakness": "Moves extremely slowly (0.4m/s) when close to a player, making it easy to loop.",
+    "huntThreshold": 40
   },
   {
     "name": "Thaye",
     "evidences": ["Ghost Orb", "Ghost Writing", "D.O.T.S Projector"],
-    "description": "A ghost that starts off aggressive but weakens over time as it ages.",
-    "ability": "Starts aggressive but weakens over time.",
-    "weakness": "Ages and slows down."
+    "description": "A ghost that ages and becomes weaker over time during an investigation.",
+    "ability": "Starts very active and fast. Can hunt at 75% sanity when young.",
+    "weakness": "Ages and becomes slower and less active the longer players are near. Old Thaye hunts at 15% sanity.",
+    "huntThreshold": 75
   }
 ]

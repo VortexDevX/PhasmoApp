@@ -1,37 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hunting Trivia</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <div class="background-overlay"></div>
-    <div class="container">
-      <header class="spooky-header">
-        <h1>Hunting Trivia</h1>
-        <p class="subtitle">Test your knowledge of ghosts and evidence</p>
-      </header>
 
-      <main>
-        <section id="trivia-game" class="card">
-          <h2><i class="fas fa-brain"></i> Hunting Trivia</h2>
-          <div id="trivia-content"></div>
-          <!-- Ensure this element exists -->
-        </section>
-      </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hunting Trivia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Compact layout to fit in viewport */
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+    }
 
-      <a href="../index.html" class="back-button">
-        <i class="fas fa-arrow-left"></i> Back to Home
-      </a>
-    </div>
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+    }
 
-    <script src="../script.js"></script>
-    <script src="./trivia.js"></script>
-  </body>
+    .spooky-header {
+      padding: 0.8rem 0;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary-red);
+    }
+
+    .spooky-header h1 {
+      font-size: 1.8rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+
+    main {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #trivia-game {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 1rem;
+    }
+
+    #trivia-game h2 {
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+    }
+
+    #trivia-content {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .trivia-question {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0.8rem;
+      margin: 0;
+    }
+
+    .question-text {
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .trivia-options {
+      flex: 1;
+      gap: 0.5rem;
+    }
+
+    .trivia-option {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .trivia-progress {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background-overlay"></div>
+  <div class="container">
+    <header class="spooky-header">
+      <h1>Hunting Trivia</h1>
+      <p class="subtitle">Test your knowledge of ghosts and evidence</p>
+    </header>
+
+    <!-- Back Button at Top -->
+    <a href="../index.html" class="back-button">
+      <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+
+    <main>
+      <section id="trivia-game" class="card">
+        <h2><i class="fas fa-brain"></i> Hunting Trivia</h2>
+        <div id="trivia-content"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+  <script src="./trivia.js"></script>
+</body>
+
 </html>

@@ -6,19 +6,20 @@ const evidenceTypes = [
   "Ghost Writing",
   "Fingerprints",
   "Ghost Orb",
-  "DOTS Projector",
+  "D.O.T.S Projector",
 ];
 
 // Map JSON evidence names to your UI names
 const evidenceNameMap = {
   "EMF 5": "EMF Level 5",
   "Freezing Temperatures": "Freezing Temps",
-  "D.O.T.S Projector": "DOTS Projector",
+  "D.O.T.S Projector": "D.O.T.S Projector",
+  "DOTS Projector": "D.O.T.S Projector",
 };
 
 let ghosts = [];
 let selectedEvidence = [];
-let currentPage = 1; // Initialize currentPage before filterGhosts is called
+let currentPage = 1;
 const ghostsPerPage = 5;
 
 // Fetch ghost data from JSON
@@ -31,12 +32,11 @@ fetch("../ghosts.json")
         (evidence) => evidenceNameMap[evidence] || evidence
       ),
     }));
-    filterGhosts(); // Initial filter after loading
-    displayGhosts(ghosts, currentPage); // Display with pagination
+    filterGhosts();
+    displayGhosts(ghosts, currentPage);
   })
   .catch((error) => console.error("Error loading ghost data:", error));
 
-// evidence list is getting populated in evidence.html
 // Toggle Evidence Selection
 function toggleEvidence(evidence) {
   const index = selectedEvidence.indexOf(evidence);
@@ -52,7 +52,8 @@ function toggleEvidence(evidence) {
 // Update UI for Evidence
 function updateEvidenceUI() {
   document.querySelectorAll(".evidence-item").forEach((item) => {
-    if (selectedEvidence.includes(item.innerText)) {
+    const itemText = item.innerText.trim();
+    if (selectedEvidence.includes(itemText)) {
       item.classList.add("selected");
     } else {
       item.classList.remove("selected");
@@ -65,19 +66,26 @@ function filterGhosts() {
   const possibleGhosts = ghosts.filter((ghost) =>
     selectedEvidence.every((evidence) => ghost.evidence.includes(evidence))
   );
-  displayGhosts(possibleGhosts, currentPage); // Update displayed ghosts
+  currentPage = 1;
+  displayGhosts(possibleGhosts, currentPage);
 }
 
 // Reset Button
-document.getElementById("reset-button").addEventListener("click", () => {
-  selectedEvidence = [];
-  updateEvidenceUI();
-  filterGhosts();
-});
+const resetButton = document.getElementById("reset-button");
+if (resetButton) {
+  resetButton.addEventListener("click", () => {
+    selectedEvidence = [];
+    updateEvidenceUI();
+    currentPage = 1;
+    filterGhosts();
+  });
+}
 
 // Display Ghosts with Pagination
 function displayGhosts(filteredGhosts = ghosts, page = 1) {
   const guideContent = document.getElementById("guide-content");
+  if (!guideContent) return;
+
   const startIndex = (page - 1) * ghostsPerPage;
   const endIndex = startIndex + ghostsPerPage;
   const paginatedGhosts = filteredGhosts.slice(startIndex, endIndex);
@@ -87,17 +95,30 @@ function displayGhosts(filteredGhosts = ghosts, page = 1) {
         .map(
           (ghost) => `
             <div class="ghost-card">
-              <h3>${ghost.name}</h3>
+              <h3>${ghost.name}${
+            ghost.note
+              ? ` <span style="font-size: 0.7em; color: var(--accent-orange);">⚠️ ${ghost.note}</span>`
+              : ""
+          }</h3>
               <p>${ghost.description}</p>
               <div class="ghost-evidence">
-                Evidence: ${ghost.evidence.join(", ")}
+                <strong>Evidence:</strong> ${ghost.evidence.join(", ")}
               </div>
               <div class="ghost-ability">
-                Ability: ${ghost.ability}
+                <strong>Ability:</strong> ${ghost.ability}
               </div>
               <div class="ghost-weakness">
-                Weakness: ${ghost.weakness}
+                <strong>Weakness:</strong> ${ghost.weakness}
               </div>
+              ${
+                ghost.huntThreshold
+                  ? `
+              <div style="margin-top: 8px; padding: 4px 8px; background: rgba(239, 68, 68, 0.2); border-radius: 4px; font-size: 0.85em;">
+                <strong style="color: var(--accent-red);">Hunt Threshold:</strong> ${ghost.huntThreshold}% sanity
+              </div>
+              `
+                  : ""
+              }
             </div>
           `
         )
@@ -109,8 +130,9 @@ function displayGhosts(filteredGhosts = ghosts, page = 1) {
 
 // Pagination
 function updatePagination(totalGhosts, currentPage) {
-  const totalPages = Math.ceil(totalGhosts / ghostsPerPage);
+  const totalPages = Math.ceil(totalGhosts / ghostsPerPage) || 1;
   const pagination = document.getElementById("pagination");
+  if (!pagination) return;
 
   pagination.innerHTML = `
     <button onclick="changePage(${currentPage - 1})" ${
@@ -118,7 +140,7 @@ function updatePagination(totalGhosts, currentPage) {
   }>Previous</button>
     <span>Page ${currentPage} of ${totalPages}</span>
     <button onclick="changePage(${currentPage + 1})" ${
-    currentPage === totalPages ? "disabled" : ""
+    currentPage >= totalPages ? "disabled" : ""
   }>Next</button>
   `;
 }
